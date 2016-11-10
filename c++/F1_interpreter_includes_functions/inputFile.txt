@@ -1,0 +1,15 @@
+main()
+{
+func1(2)
+func2(3)
+}
+func1(int a1)
+{
+x1=a1+5
+x2=x1+10
+}
+func2(int a2)
+{
+x3=2*a2+100
+printx x3
+}endoffile

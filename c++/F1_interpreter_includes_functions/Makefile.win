@@ -1,0 +1,72 @@
+# Project: Interp_fcts
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = CLkList.o Cmd.o CNode.o Fct.o FLkList.o FNode.o Globals.o Interpreter.o main.o Parameter.o PLkList.o PNode.o Variable.o VLkList.o VNode.o $(RES)
+LINKOBJ  = CLkList.o Cmd.o CNode.o Fct.o FLkList.o FNode.o Globals.o Interpreter.o main.o Parameter.o PLkList.o PNode.o Variable.o VLkList.o VNode.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = Interp_fcts.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Interp_fcts.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Interp_fcts.exe" $(LIBS)
+
+CLkList.o: CLkList.cpp
+	$(CPP) -c CLkList.cpp -o CLkList.o $(CXXFLAGS)
+
+Cmd.o: Cmd.cpp
+	$(CPP) -c Cmd.cpp -o Cmd.o $(CXXFLAGS)
+
+CNode.o: CNode.cpp
+	$(CPP) -c CNode.cpp -o CNode.o $(CXXFLAGS)
+
+Fct.o: Fct.cpp
+	$(CPP) -c Fct.cpp -o Fct.o $(CXXFLAGS)
+
+FLkList.o: FLkList.cpp
+	$(CPP) -c FLkList.cpp -o FLkList.o $(CXXFLAGS)
+
+FNode.o: FNode.cpp
+	$(CPP) -c FNode.cpp -o FNode.o $(CXXFLAGS)
+
+Globals.o: Globals.cpp
+	$(CPP) -c Globals.cpp -o Globals.o $(CXXFLAGS)
+
+Interpreter.o: Interpreter.cpp
+	$(CPP) -c Interpreter.cpp -o Interpreter.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Parameter.o: Parameter.cpp
+	$(CPP) -c Parameter.cpp -o Parameter.o $(CXXFLAGS)
+
+PLkList.o: PLkList.cpp
+	$(CPP) -c PLkList.cpp -o PLkList.o $(CXXFLAGS)
+
+PNode.o: PNode.cpp
+	$(CPP) -c PNode.cpp -o PNode.o $(CXXFLAGS)
+
+Variable.o: Variable.cpp
+	$(CPP) -c Variable.cpp -o Variable.o $(CXXFLAGS)
+
+VLkList.o: VLkList.cpp
+	$(CPP) -c VLkList.cpp -o VLkList.o $(CXXFLAGS)
+
+VNode.o: VNode.cpp
+	$(CPP) -c VNode.cpp -o VNode.o $(CXXFLAGS)
