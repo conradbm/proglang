@@ -23,6 +23,27 @@
                  F   := VAR^(E) | ln(E) | arctan(E)
                  T   := A*T | A
                  A   := NR | VAR
+                 
+   Another example of a grammmar to embrace iterative statements:
+   StmtLst := null | StmtLst Stmt
+   Stmt := whileStmt { StmtLst } | forStmt { StmtLst } | printStmt | inputStmt | Asg
+   forStmt := for (Asg ; condition ; Asg)
+   whileStmt := while ( condition )
+   condition := A condition_op A
+   condition_op := > | < | >= | <= | == | != | & | /|
+   Asg := VAR=E | E
+   E -> T+E | T-E | T
+   T -> A*T | A
+   A -> NR | VAR
+   NR -> [1-9]+[0-9]*
+   VAR -> [a-zA-Z]+[[a-z]|[A-Z]|[_]|[0-9]]*
+   
+   Interesting continuing education thoughts ... 
+   1. What is a token in LISP? What R.E's accept them? || Lexical Analysis
+   2. What is the grammar in LISP?                     || Symantic Analysis
+   3. How does this differ from C?
+   4. How do we introduce C++ 'class' and associated keywords into the C Grammar?
+   
    Input: 
           main()
           {
