@@ -20,7 +20,7 @@
    New Language is L = {x = y^2 + 3, y = e^(x) + z^2, z = arctan(e^(pi)), x = ln(y^2) + z^2, ...}
    New Grammar is : Asg := VAR=E
                  E   := T + E | T - E | F + E | F - E | F | T
-                 F   := e^(E) | ln(E) | arctan(E)
+                 F   := VAR^(E) | ln(E) | arctan(E)
                  T   := A*T | A
                  A   := NR | VAR
    Input: 
