@@ -8,7 +8,7 @@
 
 <h4>ANSI C:</h4>
 <ul>
-  <li href="http://www.quut.com/c/ANSI-C-grammar-l-2011.html">Lexical Analysis</li>
+  <li>[Lexical Analysis][http://www.quut.com/c/ANSI-C-grammar-l-2011.html]</li>
   <li href="http://www.quut.com/c/ANSI-C-grammar-y.html#argument_expression_list">Syntax & Semantic Analysis</li>
   <li> </li>
 </ul>
